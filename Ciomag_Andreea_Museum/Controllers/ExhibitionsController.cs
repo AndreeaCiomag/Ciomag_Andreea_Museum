@@ -43,7 +43,7 @@ namespace Ciomag_Andreea_Museum.Controllers
                               select e;
             if(!String.IsNullOrEmpty(searchString))
             {
-                exhibitions = exhibitions.Where(e => e.Name.Contains(searchString));
+                exhibitions = exhibitions.Where(e => e.Name.ToLower().Contains(searchString.ToLower()));
             }
             switch (sortOrder)
             {

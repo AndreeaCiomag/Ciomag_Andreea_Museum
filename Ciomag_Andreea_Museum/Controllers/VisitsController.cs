@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Ciomag_Andreea_Museum.Data;
 using Ciomag_Andreea_Museum.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ciomag_Andreea_Museum.Controllers
 {
+    [Authorize]
     public class VisitsController : Controller
     {
         private readonly MuseumContext _context;

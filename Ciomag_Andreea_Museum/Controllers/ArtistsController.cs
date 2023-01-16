@@ -41,7 +41,7 @@ namespace Ciomag_Andreea_Museum.Controllers
                           select a;
             if(!String.IsNullOrEmpty(searchString))
             {
-                artists = artists.Where(a => a.Name.Contains(searchString));
+                artists = artists.Where(a => a.Name.ToLower().Contains(searchString.ToLower()));
             }
             switch(sortOrder)
             {

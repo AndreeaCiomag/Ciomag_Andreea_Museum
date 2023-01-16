@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Ciomag_Andreea_Museum.Controllers
 {
-    //[Authorize(Roles = "Employee")]
+    [Authorize]
     public class ClientsController : Controller
     {
         private readonly MuseumContext _context;
@@ -41,7 +41,7 @@ namespace Ciomag_Andreea_Museum.Controllers
                           select c;
             if(!String.IsNullOrEmpty(searchString))
             {
-                clients = clients.Where(c => c.FirstName.Contains(searchString));
+                clients = clients.Where(c => c.FirstName.ToLower().Contains(searchString.ToLower()) || c.LastName.ToLower().Contains(searchString.ToLower()));
             }
             switch(sortOrder)
             {
