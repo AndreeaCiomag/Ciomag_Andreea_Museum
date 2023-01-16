@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Data\" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Models\MuseumViewModels\" />
+    <None Remove="Hubs\" />
+    <None Remove="Microsoft.AspNet.SignalR.JS" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Views\Claims\" />
+    <None Remove="Views\Roles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.12" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.JS" Version="2.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Models\MuseumViewModels\" />
+    <Folder Include="Hubs\" />
+    <Folder Include="Views\Claims\" />
+    <Folder Include="Views\Roles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\VisitedExhibition.cs" />
+    <Compile Remove="Models\MuseumViewModels\ExhibitionIndexData.cs" />
+    <Compile Remove="Migrations\20230114092055_Fourth.cs" />
+    <Compile Remove="Migrations\20230114092055_Fourth.Designer.cs" />
+    <Compile Remove="Migrations\20230113202642_ThirdComplete.Designer.cs" />
+    <Compile Remove="Migrations\20230113202642_ThirdComplete.cs" />
+    <Compile Remove="Migrations\20230113201023_Third.cs" />
+    <Compile Remove="Migrations\20230113201023_Third.Designer.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ciomag_Andreea_Museum", "Ciomag_Andreea_Museum\Ciomag_Andreea_Museum.csproj", "{04CD92A2-0E3D-451C-985C-0AF92E829761}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04CD92A2-0E3D-451C-985C-0AF92E829761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CD92A2-0E3D-451C-985C-0AF92E829761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CD92A2-0E3D-451C-985C-0AF92E829761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CD92A2-0E3D-451C-985C-0AF92E829761}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F558B77F-620D-4B2A-B89B-CF3BAF74ECCA}
+	EndGlobalSection
+EndGlobal

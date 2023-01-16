@@ -1,0 +1,39 @@
+@model Ciomag_Andreea_Museum.Models.Visit
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<p class="text-danger">@ViewData["ErrorMessage"]</p>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Visit</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Visit Date
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VisitDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Client)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.FirstName) @Html.DisplayFor(model => model.Client.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gallery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gallery.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

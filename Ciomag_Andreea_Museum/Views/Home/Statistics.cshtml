@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Ciomag_Andreea_Museum.Models.MuseumViewModels.VisitGroup>
+
+@{
+    ViewData["Title"] = "Visits Statistics";
+}
+
+<h2>Visits Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Visit Date
+        </th>
+        <th>
+            Clients Number
+        </th>
+    </tr>
+    @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VisitDate)
+                    </td>
+                    <td>
+                        @item.ClientsCount
+                    </td>
+                </tr>
+            }
+</table>

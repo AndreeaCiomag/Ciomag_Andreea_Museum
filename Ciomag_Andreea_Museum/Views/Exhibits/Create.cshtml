@@ -1,0 +1,64 @@
+@model Ciomag_Andreea_Museum.Models.Exhibit
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Exhibit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <select asp-for="Type" class="form-control">
+                    <option value="Paint">Paint</option>
+                    <option value="Sculpture">Sculpture</option>
+                    <option value="Photography">Photography</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movement" class="control-label"></label>
+                <select asp-for="Movement" class="form-control">
+                    <option value="Neoclassicism">Neoclassicism</option>
+                    <option value="Romanticism">Romanticism</option>
+                    <option value="ArtNouveau">Art Nouveau</option>
+                    <option value="Symbolism">Symbolism</option>
+                    <option value="Modernism">Modernism</option>
+                    <option value="Surrealism">Surrealism</option>
+                    <option value="Abstract">Abstract</option>
+                    <option value="Conceptual">Conceptual</option>
+                    <option value="Postmodernism">Postmodernism</option>
+                    <option value="Minimalism">Minimalism</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExhibitionID" class="control-label">Exhibition</label>
+                <select asp-for="ExhibitionID" class="form-control" asp-items="ViewBag.ExhibitionID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistID" class="control-label">Artist</label>
+                <select asp-for="ArtistID" class="form-control" asp-items="ViewBag.ArtistID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
